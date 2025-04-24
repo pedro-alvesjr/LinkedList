@@ -125,24 +125,91 @@ class LinkedList:
             temp = after
 
 
+# Testing the LinkedList class and its methods
 
+# Create a LinkedList and perform operations
 my_linked_list = LinkedList(1)
+
+# Test 1: Print the initial list
+print("Initial list:")
+my_linked_list.print_list()
+
+# Test 2: Append values to the list
+print("\nAppending values 2, 3, 4, 5, 6 to the list...")
 my_linked_list.append(2)
 my_linked_list.append(3)
 my_linked_list.append(4)
 my_linked_list.append(5)
-my_linked_list.pop()
-my_linked_list.prepend(0)
+my_linked_list.append(6)
 
-print('Get index:', my_linked_list.get(2))
-print('Head:', my_linked_list.head.value)
-print('Tail:', my_linked_list.tail.value)
-print('Length:', my_linked_list.length, '\n')
-
-print('Linked List:')
+# Test 3: Print the list after appending values
+print("\nList after appending 5 values:")
 my_linked_list.print_list()
 
+# Test 4: Prepend a value to the list
+print("\nPrepending value 0 to the list...")
+my_linked_list.prepend(0)
+
+# Test 5: Print the list after prepending a value
+print("\nList after prepending value 0:")
+my_linked_list.print_list()
+
+# Test 6: Pop a value from the list
+print("\nPopping one value from the list...")
+popped_node = my_linked_list.pop()
+if popped_node:
+    print(f"Popped value: {popped_node.value}")
+else:
+    print("List is empty, nothing to pop.")
+
+# Test 7: Print the list after popping one value
+print("\nList after popping one value:")
+my_linked_list.print_list()
+
+# Test 8: Pop the first element from the list
+print("\nPopping the first value from the list...")
+popped_first_node = my_linked_list.pop_first()
+if popped_first_node:
+    print(f"Popped first value: {popped_first_node.value}")
+else:
+    print("List is empty, nothing to pop.")
+
+# Test 9: Print the list after popping the first value
+print("\nList after popping the first value:")
+my_linked_list.print_list()
+
+# Test 10: Set value at a specific index
+print("\nSetting value 10 at index 2...")
+my_linked_list.set_value(2, 10)
+
+# Test 11: Print the list after setting a value
+print("\nList after setting value at index 2:")
+my_linked_list.print_list()
+
+# Test 12: Insert a value at index 2
+print("\nInserting value 99 at index 2...")
+my_linked_list.insert(2, 99)
+
+# Test 13: Print the list after inserting a value
+print("\nList after inserting value at index 2:")
+my_linked_list.print_list()
+
+# Test 14: Remove a value at index 3
+print("\nRemoving value at index 3...")
+removed_node = my_linked_list.remove(3)
+if removed_node:
+    print(f"Removed value: {removed_node.value}")
+else:
+    print("Invalid index, nothing to remove.")
+
+# Test 15: Print the list after removing a value
+print("\nList after removing value at index 3:")
+my_linked_list.print_list()
+
+# Test 16: Reverse the list
+print("\nReversing the list...")
 my_linked_list.reverse()
 
-print('\nLL after reverse():')
+# Test 17: Print the list after reversing
+print("\nList after reversing:")
 my_linked_list.print_list()
