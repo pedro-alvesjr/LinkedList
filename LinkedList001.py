@@ -113,16 +113,15 @@ class LinkedList:
         return temp
         
     def reverse(self):
-        temp = self.head
-        self.head = self.tail
-        self.tail = temp
-        before = None
-        after = temp.next
-        for _ in range(self.length):
-            after = temp.next
-            temp.next = before
-            before = temp
-            temp = after
+        prev = None
+        current = self.head
+        self.tail = self.head
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
 
     def partition_list(self, num):
         if self.head is None:
@@ -232,4 +231,9 @@ my_linked_list.reverse()
 
 # Test 17: Print the list after reversing
 print("\nList after reversing:")
+my_linked_list.print_list()
+
+# Test 18: Partition List:
+my_linked_list.partition_list(5)
+print("\nAfter partition_list() method: ")
 my_linked_list.print_list()
