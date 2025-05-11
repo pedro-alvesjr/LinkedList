@@ -126,8 +126,7 @@ class LinkedList:
     def partition_list(self, num):
         if self.head is None:
             return None
-        dummy1 = Node(0)
-        dummy2 = Node(0)
+        dummy1, dummy2 = Node(0), Node(0)
         prev1 = dummy1
         prev2 = dummy2
         temp = self.head
