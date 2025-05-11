@@ -124,6 +124,26 @@ class LinkedList:
             before = temp
             temp = after
 
+    def partition_list(self, num):
+        if self.head is None:
+            return None
+        dummy1 = Node(0)
+        dummy2 = Node(0)
+        prev1 = dummy1
+        prev2 = dummy2
+        temp = self.head
+        while temp is not None:
+            if temp.value < num:
+                prev1.next = temp
+                prev1 = prev1.next
+            else:
+                prev2.next = temp
+                prev2 = prev2.next
+            temp = temp.next
+        prev2.next = None
+        prev1.next = dummy2.next
+        self.head = dummy1.next
+
 
 # Testing the LinkedList class and its methods
 
