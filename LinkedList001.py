@@ -127,8 +127,7 @@ class LinkedList:
         if self.head is None:
             return None
         dummy1, dummy2 = Node(0), Node(0)
-        prev1 = dummy1
-        prev2 = dummy2
+        prev1, prev2 = dummy1, dummy2
         temp = self.head
         while temp is not None:
             if temp.value < num:
