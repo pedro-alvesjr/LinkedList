@@ -250,5 +250,10 @@ my_linked_list.print_list()
 
 # Test 18: Partition List:
 my_linked_list.partition_list(5)
-print("\nAfter partition_list() method: ")
+print("\nAfter partition_list(): ")
+my_linked_list.print_list()
+
+# Test 19: Swap Pairs:
+my_linked_list.swap_pairs()
+print("\nList after swapping pairs: ")
 my_linked_list.print_list()
