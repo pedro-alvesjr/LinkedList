@@ -141,6 +141,23 @@ class LinkedList:
         prev1.next = dummy2.next
         self.head = dummy1.next
 
+    def swap_pairs(self):
+        if self.head is None or self.head.next is None:
+            return False
+        dummy = Node(0)
+        dummy.next = self.head
+        first = self.head
+        prev = dummy
+        while first and first.next:
+            second = first.next
+            first.next = second.next
+            second.next = first
+            prev.next = second
+            prev = first
+            first = prev.next
+        self.head = dummy.next
+        return True
+
 
 # Testing the LinkedList class and its methods
 
